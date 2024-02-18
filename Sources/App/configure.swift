@@ -6,5 +6,8 @@ public func configure(_ app: Application) async throws {
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
     // register routes
+    try app.register(collection: UserController())
+    try app.register(collection: RoomController())
+    try app.register(collection: ReserveController())
     try routes(app)
 }
