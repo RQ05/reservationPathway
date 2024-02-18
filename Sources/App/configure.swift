@@ -13,7 +13,11 @@ public func configure(_ app: Application) async throws {
     try app.register(collection: ReserveController())
     try routes(app)
     app.databases.use(.postgres(configuration: SQLPostgresConfiguration(hostname: "localhost", username: "postgres", password: "", database: "users" , tls: .prefer(try .init(configuration: .clientDefault)))), as: .psql)
+    app.databases.use(.postgres(configuration: SQLPostgresConfiguration(hostname: "localhost", username: "postgres", password: "", database: "rooms" , tls: .prefer(try .init(configuration: .clientDefault)))), as: .psql)
+    app.databases.use(.postgres(configuration: SQLPostgresConfiguration(hostname: "localhost", username: "postgres", password: "", database: "reserve" , tls: .prefer(try .init(configuration: .clientDefault)))), as: .psql)
     // added the database
     //so we upload fluent and make the database .. now its time to make the tables inside users :)
     app.migrations.add(CreateUser())
+    app.migrations.add(CreateRoom())
+    app.migrations.add(CreateReservation())
 }

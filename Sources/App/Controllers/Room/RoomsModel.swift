@@ -20,8 +20,8 @@ final class RoomModel :Model,Content {
     @Field(key:"Discription")
     var Discription:String
     
-    @Field(key:"Equipent")
-    var Equipent:String
+    @Field(key:"Equipment")
+    var Equipment:String
     @Field(key:"Capacity")
     var Capacity:Int
     
@@ -29,8 +29,12 @@ final class RoomModel :Model,Content {
     var Availability:Bool
       
     init(){}
-    init(id:UUID?=nil,Username:String, Email:String,Role:String){
-      //  self.id
+    init(id:UUID?=nil,Discription :String, Equipment :String, Capacity :Int , Availability : Bool ){
+        self.id = id
+        self.Discription = Discription
+        self.Equipment = Equipment
+        self.Capacity = Capacity
+        self.Availability = Availability
     } // adding the columns in the database
 
     

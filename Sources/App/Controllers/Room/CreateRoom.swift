@@ -5,7 +5,7 @@
 //  Created by Reyouf Alqahtani on 08/08/1445 AH.
 
 import Foundation
- import Fluent
+import Fluent
 import FluentPostgresDriver
 
 struct CreateRoom : Migration{
@@ -14,7 +14,7 @@ struct CreateRoom : Migration{
             .id()
             .field("RoomName", .string)
             .field("Discription", .string)
-            .field("Equipent", .string)
+            .field("Discription", .string)
             .field("Capacity", .int)
             .field("Availability", .bool)
 
