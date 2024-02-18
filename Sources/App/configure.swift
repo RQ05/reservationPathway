@@ -1,4 +1,6 @@
 import Vapor
+import Fluent
+import FluentPostgresDriver
 
 // configures your application
 public func configure(_ app: Application) async throws {
@@ -10,4 +12,8 @@ public func configure(_ app: Application) async throws {
     try app.register(collection: RoomController())
     try app.register(collection: ReserveController())
     try routes(app)
+    app.databases.use(.postgres(configuration: SQLPostgresConfiguration(hostname: "localhost", username: "postgres", password: "", database: "users" , tls: .prefer(try .init(configuration: .clientDefault)))), as: .psql)
+    // added the database
+    //so we upload fluent and make the database .. now its time to make the tables inside users :)
+    app.migrations.add(CreateUser())
 }
