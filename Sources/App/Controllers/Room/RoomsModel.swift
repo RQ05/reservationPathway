@@ -22,6 +22,7 @@ final class RoomModel :Model,Content {
     
     @Field(key:"Equipment")
     var Equipment:String
+    
     @Field(key:"Capacity")
     var Capacity:Int
     

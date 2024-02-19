@@ -14,7 +14,7 @@ struct CreateRoom : Migration{
             .id()
             .field("RoomName", .string)
             .field("Discription", .string)
-            .field("Discription", .string)
+            .field("Equipment", .string)
             .field("Capacity", .int)
             .field("Availability", .bool)
 

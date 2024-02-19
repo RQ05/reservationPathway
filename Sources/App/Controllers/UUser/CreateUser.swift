@@ -6,12 +6,12 @@
 //
 
 import Foundation
- import Fluent
+import Fluent
 import FluentPostgresDriver
 
 struct CreateUser : Migration{
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("users")
+        database.schema("user")
             .id()
             .field("Username", .string)
             .field("Email", .string)
@@ -20,7 +20,7 @@ struct CreateUser : Migration{
 
     }
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        database.schema("users").delete()
+        database.schema("user").delete()
 
     }//end of the first step of migration 
 }

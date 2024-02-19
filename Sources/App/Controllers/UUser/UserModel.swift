@@ -8,9 +8,10 @@
 import Foundation
 import Fluent
 import Vapor
+
 final class UserModel :Model,Content {
  
-    static let schema = "users"
+    static let schema = "user"
     @ID(key:.id)
     var id : UUID?
     
