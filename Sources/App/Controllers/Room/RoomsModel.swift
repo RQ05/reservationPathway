@@ -30,8 +30,9 @@ final class RoomModel :Model,Content {
     var Availability:Bool
       
     init(){}
-    init(id:UUID?=nil,Discription :String, Equipment :String, Capacity :Int , Availability : Bool ){
+    init(id:UUID?=nil,RoomName:String , Discription :String, Equipment :String, Capacity :Int , Availability : Bool ){
         self.id = id
+        self.RoomName = RoomName
         self.Discription = Discription
         self.Equipment = Equipment
         self.Capacity = Capacity

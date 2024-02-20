@@ -27,7 +27,7 @@ final class ReservationModel :Model,Content {
     var hours : String
     
     @Field(key:"reservationStatus")
-    var reservationStatus : String
+    var reservationStatus : String // i think if we make it book , true if booked else not
     
     init(){}
     init(id : UUID? = nil , roomID : UUID , userID : UUID , startDate : Date , hours : String, reservationStatus : String){

@@ -12,6 +12,7 @@ import Vapor
 final class UserModel :Model,Content {
  
     static let schema = "user"
+    
     @ID(key:.id)
     var id : UUID?
     
@@ -22,6 +23,7 @@ final class UserModel :Model,Content {
     var Email:String
     
     @Field(key:"Role")
+    
     var Role:String//supposed to be Enum but we will ask the mintor first.
     init(){}
     init(id:UUID?=nil,Username:String, Email:String,Role:String){
