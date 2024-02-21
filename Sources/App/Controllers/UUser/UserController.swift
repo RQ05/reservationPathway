@@ -40,18 +40,18 @@ struct UserController : RouteCollection {
     }
     
     
-    func update (req :Request) throws -> EventLoopFuture<UserModel> {
+    func update(req: Request) throws -> EventLoopFuture<UserModel> {
         let input = try req.content.decode(UserModel.self)
         return UserModel.find(req.parameters.get("userID"), on: req.db)
             .unwrap(or: Abort(.notFound))
-            .flatMap{ user in
-                user.Username = input.Username
-                user.Email = input.Email
-                user.Role = input.Role
-                return user.save(on: req.db).map {UserModel(id: user.id , Username: user.Username , Email: user.Email, Role: user.Role)}
+            .flatMap { user in
+                user.username = input.username
+                user.email = input.email
+                user.role = input.role
+                return user.save(on: req.db).map { user }
             }
-
     }
+
     
    
     

@@ -28,9 +28,12 @@ final class RoomModel :Model,Content {
     
     @Field(key:"Availability")
     var Availability:Bool
+    
+    @Children(for: \.$room)
+    var reservations: [ReservationModel]
       
     init(){}
-    init(id:UUID?=nil,RoomName:String , Discription :String, Equipment :String, Capacity :Int , Availability : Bool ){
+    init(id:UUID? = nil ,RoomName:String , Discription :String, Equipment :String, Capacity :Int , Availability : Bool ){
         self.id = id
         self.RoomName = RoomName
         self.Discription = Discription
@@ -38,10 +41,13 @@ final class RoomModel :Model,Content {
         self.Capacity = Capacity
         self.Availability = Availability
     } // adding the columns in the database
-
-    
-    
-    
-    
-    
 }
+
+/*
+ "RoomName" :  "lab1",
+ "Discription" : "backend room",
+ "Equipment" : "screen",
+  "Capacity" : 20,
+ "Availability" : true
+ 
+ */

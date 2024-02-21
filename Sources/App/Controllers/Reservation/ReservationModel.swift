@@ -8,38 +8,36 @@ import Foundation
 import Fluent
 import Vapor
 
-final class ReservationModel :Model,Content {
+final class ReservationModel: Model, Content {
     
     static let schema = "reserve"
-    @ID(key:.id)
-    var id : UUID?
     
-    @Field(key:"roomID")
-    var RoomID:UUID
+    @ID(key: .id)
+    var id: UUID?
     
-    @Field(key:"userID")
-    var userID:UUID
+    @Parent(key: "room")
+    var room: RoomModel
     
-    @Field(key:"startDate")
-    var startDate : Date
+    @Parent(key: "user")
+    var user: UserModel
     
-    @Field(key:"hours")
-    var hours : String
+    @Field(key: "startDate")
+    var startDate: Date
     
-    @Field(key:"reservationStatus")
-    var reservationStatus : String // i think if we make it book , true if booked else not
+    @Field(key: "hours")
+    var hours: String
     
-    init(){}
-    init(id : UUID? = nil , roomID : UUID , userID : UUID , startDate : Date , hours : String, reservationStatus : String){
-        
+    @Field(key: "reservationStatus")
+    var reservationStatus: String
+    
+    init() {}
+    
+    init(id: UUID? = nil, room: UUID, user: UUID, startDate: Date, hours: String, reservationStatus: String) {
         self.id = id
-        self.RoomID = roomID
-        self.userID = userID
+        self.$room.id = room
+        self.$user.id = user
         self.startDate = startDate
         self.hours = hours
         self.reservationStatus = reservationStatus
-        
-        
-
-    } // adding the columns in the database
+    }
 }

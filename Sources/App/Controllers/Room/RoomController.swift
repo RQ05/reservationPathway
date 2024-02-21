@@ -13,7 +13,7 @@ import FluentPostgresDriver
         
 struct RoomController : RouteCollection {
         func boot(routes: Vapor.RoutesBuilder) throws {
-            let users = routes.grouped("Rooms") // to group all the functions of plants
+            let users = routes.grouped("rooms") // to group all the functions of plants
             
             users.get(use: index) // calling the function
             
@@ -59,14 +59,3 @@ struct RoomController : RouteCollection {
     }
     
 
-/*
- 
- "Discription": "roomA",
- "Equipment" : "screen",
- "Capacity" : "10 persons" ,
- "Availability" : "true"
- 
- 
- 
- 
- */
