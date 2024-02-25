@@ -15,7 +15,7 @@ struct CreateReservation : Migration{
             .id()
             .field("room", .uuid ,.required ,  .references(RoomModel.schema, "id"))
             .field("user", .uuid , .required , .references(UserModel.schema, "id"))
-            .field("startDate", .data)
+            .field("startDate", .string)
             .field("hours", .string)
             .field("reservationStatus", .string)
 

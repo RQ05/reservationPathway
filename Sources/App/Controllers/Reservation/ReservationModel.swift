@@ -22,7 +22,7 @@ final class ReservationModel: Model, Content {
     var user: UserModel
     
     @Field(key: "startDate")
-    var startDate: Date
+    var startDate: String
     
     @Field(key: "hours")
     var hours: String
@@ -32,7 +32,7 @@ final class ReservationModel: Model, Content {
     
     init() {}
     
-    init(id: UUID? = nil, room: UUID, user: UUID, startDate: Date, hours: String, reservationStatus: String) {
+    init(id: UUID? = nil, room: UUID, user: UUID, startDate: String, hours: String, reservationStatus: String) {
         self.id = id
         self.$room.id = room
         self.$user.id = user

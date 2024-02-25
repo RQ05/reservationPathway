@@ -62,6 +62,14 @@ struct ReserveController : RouteCollection {
  
 
 /*
+ {
+     "Availability": true,
+     "Discription": "backend room",
+     "RoomName": "academy",
+     "Equipment": "screen",
+     "Capacity": 123
+ }
+ 
  
  {
      "Availability": true,
@@ -85,6 +93,14 @@ struct ReserveController : RouteCollection {
      "room": "A592575A-1728-44AF-BA00-E22D4D635FAA",
      "user": "7F13C49E-AD84-498C-B3E4-1A484E02A4C0",
      "startDate": "2024-02-21T12:00:00Z",
+     "hours": "1",
+     "reservationStatus": "booked"
+ }
+ 
+ {
+   "room" : {"id": "A592575A-1728-44AF-BA00-E22D4D635FAA"} ,
+  "user": {"id": "7F13C49E-AD84-498C-B3E4-1A484E02A4C0"},
+     "startDate" : "2024-02-21",
      "hours": "1",
      "reservationStatus": "booked"
  }
