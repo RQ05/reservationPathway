@@ -5,7 +5,7 @@ The system comprises three tables to facilitate room reservations. It initially 
 
 
 ## App Statment :
-A system that enables learners to book meeting rooms within the academy building.
+A system that enables academic staff to book meeting rooms within the academy building.
 ## Feature list:
 
 - The system contains three tables that enable the user to reserve a room.
