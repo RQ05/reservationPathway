@@ -56,5 +56,8 @@ Therefore  the reservation will be exist and the user can create , update ,delet
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](<img width="1512" alt="ReserveTable" src="https://github.com/RQ05/reservationPathway/assets/46464799/059990d1-53c1-418c-b403-5c703a16f4dc">
+<img width="1512" alt="RoomTable" src="https://github.com/RQ05/reservationPathway/assets/46464799/d15129a6-5321-4db0-ac0e-6f6816d9cbf4">
+<img width="1512" alt="UserTable" src="https://github.com/RQ05/reservationPathway/assets/46464799/ae58fdf9-4999-4eb4-9dda-b542b281630b">
+)
 
