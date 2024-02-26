@@ -27,7 +27,7 @@ Therefore  the reservation will be exist and the user can create , update ,delet
 | `Email` | `String` | 
 | `Role` | `String` |
 
-#### Reservation Table 
+#### Rooms Table 
 
 
 | Column | Type     | 
@@ -39,7 +39,7 @@ Therefore  the reservation will be exist and the user can create , update ,delet
 | `Equipment` | `String` | 
 | `Availability` | `String` | 
 
-#### Rooms Table
+#### Reservation Table
 
 
 | Column | Type     | 
